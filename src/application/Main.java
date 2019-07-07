@@ -14,7 +14,7 @@ public class Main extends Application {
 	@Override
 	public void start(Stage stage) {
 		try {
-			Parent parent = FXMLLoader.load(getClass().getResource("/gui/MainView.fxml"));
+			Parent parent = FXMLLoader.load(getClass().getResource("/gui/CadastroView.fxml"));
 	    		Scene scene = new Scene(parent);
 	        	stage.setScene(scene);
 	        	stage.show();
