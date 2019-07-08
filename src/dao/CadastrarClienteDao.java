@@ -75,6 +75,7 @@ public class CadastrarClienteDao implements IDao<Cliente> {
 		boolean resultado = false;
 
 		if (validarCpf.isEmpty(obj))return true;
+		if (validarCpf.isValid(obj))return true;
 
 		if (cliente != null) {
 			alert = new Alert(AlertType.ERROR,
