@@ -74,7 +74,6 @@ public class CadastrarClienteDao implements IDao<Cliente> {
 		sql = "INSERT INTO cliente (nome, sobreNome, cpf,sexo ) values (?,?,?,?)";
 		boolean resultado = false;
 
-		if (validarCpf.isEmpty(obj))return true;
 		if (validarCpf.isValid(obj))return true;
 
 		if (cliente != null) {
