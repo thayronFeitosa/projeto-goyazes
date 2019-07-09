@@ -19,9 +19,9 @@ public class ValidarCpf implements IValidar {
 	}
 
 	/**
-	 * metodo verifica se todos os muetos não inteiros
+	 * método verifica se todos os numeros são numeros.
 	 * 
-	 * @return
+	 * @return true caso encontra alguma letra
 	 */
 	public boolean somenteNumeros(Cliente obj) {
 		numeroInfuciciente(obj);
@@ -42,6 +42,9 @@ public class ValidarCpf implements IValidar {
 		return false;
 	}
 
+	/**
+	 * método isValida usa todos os métodos da classe ValidaCpf trazendo mais segurança para a validação. 
+	 */
 	@Override
 	public boolean isValid(Cliente obj) {
 		if (isEmpty(obj) == true) {
