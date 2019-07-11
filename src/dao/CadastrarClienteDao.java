@@ -71,7 +71,7 @@ public class CadastrarClienteDao implements IDao<Cliente> {
 		ValidarCpf validarCpf = new ValidarCpf();
 		conn = Conexao.abrirConexao();
 
-		sql = "INSERT INTO cliente (nome, sobreNome, cpf,sexo ) values (?,?,?,?)";
+		sql = "INSERT INTO cliente (nome, sobreNome, sexo, cpf, email ) values (?,?,?,?,?)";
 		boolean resultado = false;
 
 		if (validarCpf.isValid(obj))return true;
@@ -92,6 +92,7 @@ public class CadastrarClienteDao implements IDao<Cliente> {
 			query.setString(2, obj.getSobreNome());
 			query.setString(3, obj.getCpf());
 			query.setString(4, obj.getSexo());
+			query.setString(5, obj.getEmail());
 
 			int verifica = query.executeUpdate();
 

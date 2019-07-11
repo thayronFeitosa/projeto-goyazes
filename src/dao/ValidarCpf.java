@@ -69,7 +69,7 @@ public class ValidarCpf implements IValidar {
 		if (somenteNumeros(obj) == true) {
 			Alert alert = new Alert(AlertType.ERROR, "verifique o CPF e tente novamamente.");
 			alert.setTitle("Erro. No CPF");
-			alert.setHeaderText("O CPF deve conter somente numeros");
+			alert.setHeaderText("O CPF não pode conter letras");
 			alert.show();
 			return true;
 		}
@@ -85,7 +85,7 @@ public class ValidarCpf implements IValidar {
 	@Override
 	public boolean isEmpty(Cliente obj) {
 		if (obj.getNome().equals("") || obj.getSobreNome().equals("") || obj.getCpf().equals("")
-				|| obj.getSexo().equals("")) {
+				|| obj.getSexo().equals("") || obj.getEmail().contentEquals("")) {
 
 			return true;
 		}

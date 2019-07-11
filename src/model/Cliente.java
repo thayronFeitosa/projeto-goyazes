@@ -6,6 +6,7 @@ public class Cliente {
 	private String sobreNome;
 	private String cpf;
 	private String sexo;
+	private String email;
 	
 
 	
@@ -63,6 +64,12 @@ public class Cliente {
 	}
 	public void setId_cliente(int id_cliente) {
 		this.id_cliente = id_cliente;
+	}
+	public String getEmail() {
+		return email;
+	}
+	public void setEmail(String email) {
+		this.email = email;
 	}
 
 
