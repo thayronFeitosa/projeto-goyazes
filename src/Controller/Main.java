@@ -1,4 +1,4 @@
-package application;
+package Controller;
 
 import java.io.IOException;
 
@@ -15,8 +15,8 @@ public class Main extends Application {
 	@Override
 	public void start(Stage stage) {
 		try {
-			Parent parent = FXMLLoader.load(getClass().getResource("/gui/MainView.fxml"));
-			stage.initStyle(StageStyle.UTILITY);
+			Parent parent = FXMLLoader.load(getClass().getResource("/gui/GuiCadastroClienteView.fxml"));
+			//stage.initStyle(StageStyle.UTILITY);
 			
 	    		Scene scene = new Scene(parent);
 	        	stage.setScene(scene);

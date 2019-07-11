@@ -25,7 +25,7 @@ hs_err_pid*
 /.gitignore
 /.project
 /.settings/
-/application/
+/Controller/
 /build.fxbuild
 /dao/
 /db.properties

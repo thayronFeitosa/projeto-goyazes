@@ -5,7 +5,6 @@ public class Cliente {
 	private String nome;
 	private String sobreNome;
 	private String cpf;
-	private String sexo;
 	private String email;
 	
 
@@ -13,11 +12,11 @@ public class Cliente {
 	public Cliente() {
 		
 	}
-	public Cliente(String nome, String sobreNome, String cpf, String sexo) {
+	public Cliente(String nome, String sobreNome, String cpf, String sexo, String email) {
 		this.nome = nome;
 		this.sobreNome = sobreNome;
 		this.cpf = cpf;
-		this.sexo = sexo;
+		this.email = email;
 	}
 
 
@@ -51,14 +50,6 @@ public class Cliente {
 	}
 
 
-	public String getSexo() {
-		return sexo;
-	}
-
-
-	public void setSexo(String sexo) {
-		this.sexo = sexo;
-	}
 	public int getId_cliente() {
 		return id_cliente;
 	}

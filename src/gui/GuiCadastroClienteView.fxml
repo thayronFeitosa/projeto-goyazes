@@ -10,9 +10,9 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="486.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.GuiController">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="486.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.CadastroClienteController">
    <children>
-      <TextField fx:id="textoNome" alignment="CENTER" layoutX="191.0" layoutY="95.0" onAction="#onBotao" prefHeight="35.0" prefWidth="241.0" promptText="Nome">
+      <TextField fx:id="textoNome" alignment="CENTER" layoutX="191.0" layoutY="95.0" prefHeight="35.0" prefWidth="241.0" promptText="Nome">
          <opaqueInsets>
             <Insets />
          </opaqueInsets></TextField>
@@ -22,7 +22,7 @@
          </font>
       </Text>
       <Label fx:id="lable" layoutX="229.0" layoutY="309.0" onDragDetected="#onHelp" />
-      <TextField fx:id="textoSobreNome" alignment="CENTER" layoutX="191.0" layoutY="132.0" onAction="#onBotao" prefHeight="35.0" prefWidth="241.0" promptText="Sobre Nome">
+      <TextField fx:id="textoSobreNome" alignment="CENTER" layoutX="191.0" layoutY="131.0" prefHeight="35.0" prefWidth="241.0" promptText="Sobre Nome">
          <opaqueInsets>
             <Insets />
          </opaqueInsets></TextField>
@@ -36,8 +36,8 @@
             <Font size="15.0" />
          </font>
       </Text>
-      <TextField fx:id="textoSexo" alignment="CENTER" layoutX="191.0" layoutY="170.0" onAction="#onBotao" prefHeight="35.0" prefWidth="241.0" promptText="CPF" />
-      <TextField fx:id="textoCpf" alignment="CENTER" layoutX="191.0" layoutY="208.0" onAction="#onBotao" prefHeight="35.0" prefWidth="241.0" promptText="E-mail" />
+      <TextField fx:id="textoCpf" alignment="CENTER" layoutX="191.0" layoutY="170.0" prefHeight="35.0" prefWidth="241.0" promptText="CPF" />
+      <TextField fx:id="email" alignment="CENTER" layoutX="191.0" layoutY="208.0" prefHeight="35.0" prefWidth="241.0" promptText="E-mail" />
       <Text layoutX="163.0" layoutY="66.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Novo Cliente" textAlignment="CENTER">
          <font>
             <Font size="48.0" />

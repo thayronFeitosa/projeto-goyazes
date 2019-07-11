@@ -13,7 +13,7 @@ import model.Cliente;
 /**
  * classe respondavel pelas alterações do cliente no banco de dados
  */
-public class CadastrarClienteDao implements IDao<Cliente> {
+public class ClienteDao implements IDao<Cliente> {
 	private Connection conn;
 	private PreparedStatement query;
 	private ResultSet rs;
@@ -32,8 +32,6 @@ public class CadastrarClienteDao implements IDao<Cliente> {
 		conn = Conexao.abrirConexao();
 		sql = "select * from cliente where cpf = ?";
 
-		boolean resultado = false;
-
 		try {
 			query = conn.prepareStatement(sql);
 			query.setString(1, cpf.toString());
@@ -43,8 +41,8 @@ public class CadastrarClienteDao implements IDao<Cliente> {
 				cliente = new Cliente();
 				cliente.setNome(rs.getString("nome"));
 				cliente.setSobreNome(rs.getString("sobreNome"));
-				cliente.setSexo(rs.getString("sexo"));
 				cliente.setCpf(rs.getString("cpf"));
+				cliente.setEmail(rs.getString("email"));
 
 			}
 		} catch (SQLException e) {
@@ -71,7 +69,7 @@ public class CadastrarClienteDao implements IDao<Cliente> {
 		ValidarCpf validarCpf = new ValidarCpf();
 		conn = Conexao.abrirConexao();
 
-		sql = "INSERT INTO cliente (nome, sobreNome, sexo, cpf, email ) values (?,?,?,?,?)";
+		sql = "INSERT INTO cliente (nome, sobreNome, cpf, email ) values (?,?,?,?)";
 		boolean resultado = false;
 
 		if (validarCpf.isValid(obj))return true;
@@ -91,8 +89,7 @@ public class CadastrarClienteDao implements IDao<Cliente> {
 			query.setString(1, obj.getNome());
 			query.setString(2, obj.getSobreNome());
 			query.setString(3, obj.getCpf());
-			query.setString(4, obj.getSexo());
-			query.setString(5, obj.getEmail());
+			query.setString(4, obj.getEmail());
 
 			int verifica = query.executeUpdate();
 

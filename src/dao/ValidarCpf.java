@@ -84,8 +84,7 @@ public class ValidarCpf implements IValidar {
 	 */
 	@Override
 	public boolean isEmpty(Cliente obj) {
-		if (obj.getNome().equals("") || obj.getSobreNome().equals("") || obj.getCpf().equals("")
-				|| obj.getSexo().equals("") || obj.getEmail().contentEquals("")) {
+		if (obj.getNome().equals("") || obj.getSobreNome().equals("") || obj.getCpf().equals("") || obj.getEmail().contentEquals("")) {
 
 			return true;
 		}
