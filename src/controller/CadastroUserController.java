@@ -1,10 +1,11 @@
-package gui;
+package controller;
 
-import dao.UserDao;
 import javafx.fxml.FXML;
 import javafx.scene.control.TextField;
 import javafx.scene.control.Button;
+import javafx.scene.control.PasswordField;
 import model.User;
+import model.Mysql.UserDao;
 
 public class CadastroUserController {
 
@@ -15,19 +16,19 @@ public class CadastroUserController {
 	@FXML
 	public TextField nome;
 	@FXML
-	public TextField sobreNome;
+	public PasswordField senha;
+	@FXML
+	public TextField acesso;
 	@FXML
 	public TextField email;
-	
-	
+
 	public void confirmar() {
 		UserDao obj = new UserDao();
-		
+
 		User user = new User();
 		user.setNome(nome.getText());
-		user.setSobreNome(sobreNome.getText());
 		user.setEmail(email.getText());
-		
+		user.setSenha(senha.getText());
 		obj.insert(user);
 	}
 

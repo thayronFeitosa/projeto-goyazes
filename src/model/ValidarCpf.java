@@ -1,8 +1,7 @@
-package dao;
+package model;
 
 import javafx.scene.control.Alert;
 import javafx.scene.control.Alert.AlertType;
-import model.Cliente;
 
 public class ValidarCpf implements IValidar {
 
@@ -48,12 +47,6 @@ public class ValidarCpf implements IValidar {
 	@Override
 	public boolean isValid(Cliente obj) {
 		if (isEmpty(obj) == true) {
-
-			Alert alert = new Alert(AlertType.ERROR, "Tende novamente.");
-			alert.setTitle("Erro. cadastro null");
-			alert.setHeaderText("Todos os campos devem ser preenchidos");
-
-			alert.show();
 			return true;
 		}
 
@@ -84,8 +77,18 @@ public class ValidarCpf implements IValidar {
 	 */
 	@Override
 	public boolean isEmpty(Cliente obj) {
-		if (obj.getNome().equals("") || obj.getSobreNome().equals("") || obj.getCpf().equals("") || obj.getEmail().contentEquals("")) {
-
+		if (obj.getNome().equals("")) {
+			AlertBox.campoObrigatorio("Nome");
+			return true;
+		}
+		if (obj.getSobreNome().equals("")) {
+			AlertBox.campoObrigatorio("Sobre Nome");
+			return true;
+		}if (obj.getEmail().equals("")) {
+			AlertBox.campoObrigatorio("Email");
+			return true;
+		}if (obj.getCpf().equals("")) {
+			AlertBox.campoObrigatorio("CPF");
 			return true;
 		}
 		return false;

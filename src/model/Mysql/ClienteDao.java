@@ -1,4 +1,4 @@
-package dao;
+package model.Mysql;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -9,6 +9,8 @@ import java.util.List;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Alert.AlertType;
 import model.Cliente;
+import model.IDao;
+import model.ValidarCpf;
 
 /**
  * classe respondavel pelas alterações do cliente no banco de dados

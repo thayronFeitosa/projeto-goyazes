@@ -1,6 +1,4 @@
-package dao;
-
-import model.Cliente;
+package model;
 
 public interface IValidar {
 	public boolean isValid(Cliente obj);
